@@ -11,7 +11,7 @@ const Table = () => {
     const fetchLeaves = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:3000/api/leave",
+                "https://employee-hub-server-production.up.railway.app/api/leave",
                 {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`

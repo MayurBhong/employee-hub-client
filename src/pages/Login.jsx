@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/api/auth/login", { email, password });
+            const response = await axios.post("https://employee-hub-server-production.up.railway.app/api/auth/login", { email, password });
             if(response.data.success) {
                 login(response.data.user)
                 localStorage.setItem("token", response.data.token)
@@ -28,7 +28,7 @@ const Login = () => {
             if(error.response && !error.response.data.success) {
                 setError(error.response.data.error);
             } else {
-                setError("Server Error");
+                setError("Server Error Link not verfied");
             }
         }
     };

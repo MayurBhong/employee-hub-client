@@ -13,7 +13,7 @@ const View = () => {
 
     const fetchSalaries = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/salary/${id}/${user.role}`,{
+            const response = await axios.get(`https://employee-hub-server-production.up.railway.app/api/salary/${id}/${user.role}`,{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }

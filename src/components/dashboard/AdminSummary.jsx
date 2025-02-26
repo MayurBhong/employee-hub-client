@@ -9,7 +9,7 @@ const AdminSummary = () => {
     useEffect(() => {
         const fitchSummary = async () => {
             try {
-                const summary = await axios.get("http://localhost:3000/api/dashboard/summary",{
+                const summary = await axios.get("https://employee-hub-server-production.up.railway.app/api/dashboard/summary",{
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }

@@ -39,7 +39,7 @@ const Add = () => {
 
         try {
             const response = await axios.post(
-                `http://localhost:3000/api/salary/add`, 
+                `https://employee-hub-server-production.up.railway.app/api/salary/add`, 
                 salary, 
             {
                 headers: {
