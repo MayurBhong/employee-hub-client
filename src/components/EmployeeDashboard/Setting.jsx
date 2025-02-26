@@ -26,7 +26,7 @@ const Setting = () => {
         } else {
           try {
             const response = await axios.put(
-                "https://employee-hub-server-production.up.railway.app/api/setting/change-password",
+                "https://employee-hub-server.onrender.com/api/setting/change-password",
                 setting,
                 {
                     headers: {

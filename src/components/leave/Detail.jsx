@@ -11,7 +11,7 @@ const Detail = () => {
         const fetchLeave = async () => {
             try {
                 const response = await axios.get(
-                    `https://employee-hub-server-production.up.railway.app/api/leave/detail/${id}`,
+                    `https://employee-hub-server.onrender.com/api/leave/detail/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -33,7 +33,7 @@ const Detail = () => {
     const changeStatus = async (id, status) => {
         try {
             const response = await axios.put(
-                `https://employee-hub-server-production.up.railway.app/api/leave/${id}`, {status},
+                `https://employee-hub-server.onrender.com/api/leave/${id}`, {status},
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -58,7 +58,7 @@ const Detail = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     <div>
                         <img
-                            src={`https://employee-hub-server-production.up.railway.app/${leave.employeeId.userId.profileImage}`}
+                            src={`https://employee-hub-server.onrender.com/${leave.employeeId.userId.profileImage}`}
                             className='rounded-full border w-72'
                         />
                     </div>

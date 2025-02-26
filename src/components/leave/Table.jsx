@@ -11,7 +11,7 @@ const Table = () => {
     const fetchLeaves = async () => {
         try {
             const response = await axios.get(
-                "https://employee-hub-server-production.up.railway.app/api/leave",
+                "https://employee-hub-server.onrender.com/api/leave",
                 {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem("token")}`

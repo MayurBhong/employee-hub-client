@@ -35,7 +35,7 @@ const Add = () => {
         });
 
         try {
-            const response = await axios.post("https://employee-hub-server-production.up.railway.app/api/employee/add", 
+            const response = await axios.post("https://employee-hub-server.onrender.com/api/employee/add", 
             formDataObj, 
             {
                 headers: {

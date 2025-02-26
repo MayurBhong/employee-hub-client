@@ -28,7 +28,7 @@ const Edit = () => {
         const fetchEmployee = async () => {
             try {
                 const response = await axios.get(
-                    `https://employee-hub-server-production.up.railway.app/api/employee/${id}`,
+                    `https://employee-hub-server.onrender.com/api/employee/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -65,7 +65,7 @@ const Edit = () => {
 
         try {
             const response = await axios.put(
-                `https://employee-hub-server-production.up.railway.app/api/employee/${id}`, 
+                `https://employee-hub-server.onrender.com/api/employee/${id}`, 
             employee, 
             {
                 headers: {

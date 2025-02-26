@@ -11,7 +11,7 @@ const List = () => {
 
     const fetchLeaves = async () => {
         try {
-            const response = await axios.get(`https://employee-hub-server-production.up.railway.app/api/leave/${id}/${user.role}`,{
+            const response = await axios.get(`https://employee-hub-server.onrender.com/api/leave/${id}/${user.role}`,{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
